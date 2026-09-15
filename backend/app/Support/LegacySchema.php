@@ -67,4 +67,14 @@ final class LegacySchema
             return self::$columns[$key] = false;
         }
     }
+
+    public static function rememberColumn(string $table, string $column, bool $exists = true): void
+    {
+        self::$columns[$table.'.'.$column] = $exists;
+    }
+
+    public static function forgetColumn(string $table, string $column): void
+    {
+        unset(self::$columns[$table.'.'.$column]);
+    }
 }

@@ -124,12 +124,16 @@ class BarcodeScannerRepository
     public function updateHeader(string $docnum, array $attributes): void
     {
         $allowed = ['pickup', 'return', 'dstcde', 'voynum', 'eirstatus', 'eirstatusdte', 'accpt_dte'];
+        // pickup/return/accpt_dte are core EIR columns. Schema::hasColumn can
+        // report false on this MySQL, which used to save Type of Move and skip
+        // Acceptance Date/Time.
+        $alwaysWrite = ['pickup', 'return', 'accpt_dte', 'eirstatus', 'eirstatusdte', 'dstcde'];
         $payload = [];
         foreach ($allowed as $column) {
             if (! array_key_exists($column, $attributes)) {
                 continue;
             }
-            if ($column !== 'pickup' && $column !== 'return' && ! LegacySchema::hasColumn('eirtranfile1', $column)) {
+            if (! in_array($column, $alwaysWrite, true) && ! LegacySchema::hasColumn('eirtranfile1', $column)) {
                 continue;
             }
             $payload[$column] = $attributes[$column];
