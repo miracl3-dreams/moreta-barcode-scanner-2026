@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/png" href="images/moreta-logo.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Moreta Barcode Scanner</title>
+    <script>
+      // Dark mode — deferred; always light for now
+      (function () {
+        document.documentElement.classList.remove('dark')
+        document.documentElement.setAttribute('data-theme', 'light')
+        /*
+        try {
+          var t = localStorage.getItem('moreta-color-mode') || localStorage.getItem('moreta-theme')
+          if (t === 'midnight') t = 'dark'
+          if (t === 'ocean') t = 'blue'
+          if (t === 'rose') t = 'pink'
+          var mode = t === 'dark' || t === 'blue' || t === 'pink' || t === 'light' ? t : 'light'
+          document.documentElement.classList.toggle('dark', mode !== 'light')
+          document.documentElement.setAttribute('data-theme', mode)
+        } catch (e) {
+          document.documentElement.setAttribute('data-theme', 'light')
+        }
+        */
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

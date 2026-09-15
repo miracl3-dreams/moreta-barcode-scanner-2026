@@ -1,0 +1,226 @@
+@import "tailwindcss";
+
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --font-login: Verdana, Helvetica, Arial, sans-serif;
+  --font-app: Verdana, Tahoma, Helvetica, sans-serif;
+  --color-login-need: #4497c1;
+  --color-login-rule: #9fccad;
+  --color-login-error: #ffff99;
+  --color-brand-navy: #132b81;
+  --color-brand-navy-hover: #0f2367;
+  --color-brand-red: #bb1d12;
+  --color-brand-red-hover: #9c170e;
+  --color-brand-blue: #1e4ed8;
+  --color-brand-blue-hover: #1a43b8;
+  --color-brand-gray: #f0f0f0;
+  --color-app-header: #132b81;
+  --color-app-header-hover: #0f2367;
+  --color-app-bar: #bb1d12;
+  --color-app-bar-hover: #e0574a;
+  --color-menu-item: #0000ee;
+}
+
+@keyframes toast-slide-in {
+  from {
+    opacity: 0;
+    transform: translateY(-12px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes dialog-fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dialog-zoom-in {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -48%) scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1);
+  }
+}
+
+.toast-root[data-state='open'] {
+  animation: toast-slide-in 220ms ease-out;
+}
+
+.dialog-overlay[data-state='open'] {
+  animation: dialog-fade-in 180ms ease-out;
+}
+
+.dialog-content[data-state='open'] {
+  animation: dialog-zoom-in 220ms ease-out;
+}
+
+/* Dark mode — remap the light surfaces / ink used across the app shell and pages. */
+html.dark {
+  color-scheme: dark;
+  background-color: #0b1220;
+  color: #e2e8f0;
+}
+
+html.dark .bg-brand-gray {
+  background-color: #0b1220;
+}
+
+html.dark .bg-white {
+  background-color: #152033;
+}
+
+html.dark .bg-slate-50,
+html.dark .bg-slate-50\/80 {
+  background-color: #1a2740;
+}
+
+html.dark .bg-slate-100 {
+  background-color: #243352;
+}
+
+html.dark .text-slate-900 {
+  color: #f8fafc;
+}
+
+html.dark .text-slate-800 {
+  color: #f1f5f9;
+}
+
+html.dark .text-slate-700 {
+  color: #e2e8f0;
+}
+
+html.dark .text-slate-600 {
+  color: #cbd5e1;
+}
+
+html.dark .text-slate-500,
+html.dark .text-slate-400 {
+  color: #94a3b8;
+}
+
+html.dark .border-slate-200,
+html.dark .border-slate-100 {
+  border-color: #334155;
+}
+
+html.dark .ring-slate-200,
+html.dark .ring-slate-100 {
+  --tw-ring-color: #334155;
+}
+
+html.dark .hover\:bg-slate-50:hover,
+html.dark .hover\:bg-white:hover {
+  background-color: #1a2740;
+}
+
+html.dark .hover\:bg-slate-100:hover {
+  background-color: #243352;
+}
+
+html.dark .placeholder\:text-slate-400::placeholder {
+  color: #94a3b8;
+}
+
+/* Blue dark mode */
+html.dark[data-theme='blue'] {
+  background-color: #071525;
+  color: #dbeafe;
+}
+
+html.dark[data-theme='blue'] .bg-brand-gray {
+  background-color: #071525;
+}
+
+html.dark[data-theme='blue'] .bg-white {
+  background-color: #0f2744;
+}
+
+html.dark[data-theme='blue'] .bg-slate-50,
+html.dark[data-theme='blue'] .bg-slate-50\/80 {
+  background-color: #163456;
+}
+
+html.dark[data-theme='blue'] .bg-slate-100 {
+  background-color: #1e4060;
+}
+
+html.dark[data-theme='blue'] .border-slate-200,
+html.dark[data-theme='blue'] .border-slate-100 {
+  border-color: #2a5080;
+}
+
+html.dark[data-theme='blue'] .ring-slate-200,
+html.dark[data-theme='blue'] .ring-slate-100 {
+  --tw-ring-color: #2a5080;
+}
+
+html.dark[data-theme='blue'] .hover\:bg-slate-50:hover,
+html.dark[data-theme='blue'] .hover\:bg-white:hover {
+  background-color: #163456;
+}
+
+html.dark[data-theme='blue'] .hover\:bg-slate-100:hover {
+  background-color: #1e4060;
+}
+
+html.dark[data-theme='blue'] .text-brand-navy {
+  color: #93c5fd;
+}
+
+/* Pink dark mode */
+html.dark[data-theme='pink'] {
+  background-color: #1a0b14;
+  color: #fce7f3;
+}
+
+html.dark[data-theme='pink'] .bg-brand-gray {
+  background-color: #1a0b14;
+}
+
+html.dark[data-theme='pink'] .bg-white {
+  background-color: #2a1420;
+}
+
+html.dark[data-theme='pink'] .bg-slate-50,
+html.dark[data-theme='pink'] .bg-slate-50\/80 {
+  background-color: #351a28;
+}
+
+html.dark[data-theme='pink'] .bg-slate-100 {
+  background-color: #422032;
+}
+
+html.dark[data-theme='pink'] .border-slate-200,
+html.dark[data-theme='pink'] .border-slate-100 {
+  border-color: #6b3a52;
+}
+
+html.dark[data-theme='pink'] .ring-slate-200,
+html.dark[data-theme='pink'] .ring-slate-100 {
+  --tw-ring-color: #6b3a52;
+}
+
+html.dark[data-theme='pink'] .hover\:bg-slate-50:hover,
+html.dark[data-theme='pink'] .hover\:bg-white:hover {
+  background-color: #351a28;
+}
+
+html.dark[data-theme='pink'] .hover\:bg-slate-100:hover {
+  background-color: #422032;
+}
+
+html.dark[data-theme='pink'] .text-brand-navy {
+  color: #f9a8d4;
+}
