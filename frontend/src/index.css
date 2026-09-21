@@ -82,12 +82,12 @@ html.dark .bg-brand-gray {
 }
 
 html.dark .bg-white {
-  background-color: #152033;
+  background-color: #152033 !important;
 }
 
 html.dark .bg-slate-50,
 html.dark .bg-slate-50\/80 {
-  background-color: #1a2740;
+  background-color: #1a2740 !important;
 }
 
 html.dark .bg-slate-100 {
@@ -101,7 +101,7 @@ html.dark .text-brand-navy,
 html.dark .text-app-header,
 html.dark .text-black,
 html.dark .text-menu-item {
-  color: #ffffff;
+  color: #ffffff !important;
 }
 
 html.dark .text-slate-600 {
@@ -116,6 +116,14 @@ html.dark .text-slate-400 {
 html.dark input:not([type='checkbox']):not([type='radio']),
 html.dark select,
 html.dark textarea {
+  color: #ffffff;
+}
+
+html.dark select,
+html.dark option,
+html.dark optgroup {
+  color-scheme: dark;
+  background-color: #152033;
   color: #ffffff;
 }
 
@@ -136,11 +144,41 @@ html.dark .ring-slate-100 {
 
 html.dark .hover\:bg-slate-50:hover,
 html.dark .hover\:bg-white:hover {
-  background-color: #1a2740;
+  background-color: #1a2740 !important;
 }
 
 html.dark .hover\:bg-slate-100:hover {
-  background-color: #243352;
+  background-color: #243352 !important;
+}
+
+html.dark .bg-sky-50,
+html.dark .bg-sky-50\/80,
+html.dark .bg-sky-100 {
+  background-color: #243352 !important;
+}
+
+html.dark [role='listbox'],
+html.dark [role='menu'],
+html.dark [data-suggest-portal] {
+  background-color: #152033 !important;
+  color: #ffffff !important;
+}
+
+html.dark [role='listbox'] button,
+html.dark [role='option'],
+html.dark [role='menuitemradio'],
+html.dark [data-suggest-portal] button,
+html.dark [data-suggest-portal] li {
+  color: #ffffff !important;
+}
+
+html.dark [role='listbox'] button:hover,
+html.dark [role='listbox'] button:focus,
+html.dark [role='option']:hover,
+html.dark [role='menuitemradio']:hover,
+html.dark [data-suggest-portal] button:hover {
+  background-color: #243352 !important;
+  color: #ffffff !important;
 }
 
 html.dark .placeholder\:text-slate-400::placeholder {
@@ -158,12 +196,12 @@ html.dark[data-theme='blue'] .bg-brand-gray {
 }
 
 html.dark[data-theme='blue'] .bg-white {
-  background-color: #0f2744;
+  background-color: #0f2744 !important;
 }
 
 html.dark[data-theme='blue'] .bg-slate-50,
 html.dark[data-theme='blue'] .bg-slate-50\/80 {
-  background-color: #163456;
+  background-color: #163456 !important;
 }
 
 html.dark[data-theme='blue'] .bg-slate-100 {
@@ -182,11 +220,35 @@ html.dark[data-theme='blue'] .ring-slate-100 {
 
 html.dark[data-theme='blue'] .hover\:bg-slate-50:hover,
 html.dark[data-theme='blue'] .hover\:bg-white:hover {
-  background-color: #163456;
+  background-color: #163456 !important;
 }
 
 html.dark[data-theme='blue'] .hover\:bg-slate-100:hover {
-  background-color: #1e4060;
+  background-color: #1e4060 !important;
+}
+
+html.dark[data-theme='blue'] .bg-sky-50,
+html.dark[data-theme='blue'] .bg-sky-50\/80,
+html.dark[data-theme='blue'] .bg-sky-100 {
+  background-color: #1e4060 !important;
+}
+
+html.dark[data-theme='blue'] select,
+html.dark[data-theme='blue'] option,
+html.dark[data-theme='blue'] optgroup,
+html.dark[data-theme='blue'] [role='listbox'],
+html.dark[data-theme='blue'] [role='menu'],
+html.dark[data-theme='blue'] [data-suggest-portal] {
+  background-color: #0f2744 !important;
+  color: #ffffff !important;
+}
+
+html.dark[data-theme='blue'] [role='listbox'] button:hover,
+html.dark[data-theme='blue'] [role='option']:hover,
+html.dark[data-theme='blue'] [role='menuitemradio']:hover,
+html.dark[data-theme='blue'] [data-suggest-portal] button:hover {
+  background-color: #1e4060 !important;
+  color: #ffffff !important;
 }
 
 html.dark[data-theme='blue'] .text-brand-navy,
@@ -206,12 +268,12 @@ html.dark[data-theme='pink'] .bg-brand-gray {
 }
 
 html.dark[data-theme='pink'] .bg-white {
-  background-color: #2a1420;
+  background-color: #2a1420 !important;
 }
 
 html.dark[data-theme='pink'] .bg-slate-50,
 html.dark[data-theme='pink'] .bg-slate-50\/80 {
-  background-color: #351a28;
+  background-color: #351a28 !important;
 }
 
 html.dark[data-theme='pink'] .bg-slate-100 {
@@ -230,11 +292,35 @@ html.dark[data-theme='pink'] .ring-slate-100 {
 
 html.dark[data-theme='pink'] .hover\:bg-slate-50:hover,
 html.dark[data-theme='pink'] .hover\:bg-white:hover {
-  background-color: #351a28;
+  background-color: #351a28 !important;
 }
 
 html.dark[data-theme='pink'] .hover\:bg-slate-100:hover {
-  background-color: #422032;
+  background-color: #422032 !important;
+}
+
+html.dark[data-theme='pink'] .bg-sky-50,
+html.dark[data-theme='pink'] .bg-sky-50\/80,
+html.dark[data-theme='pink'] .bg-sky-100 {
+  background-color: #422032 !important;
+}
+
+html.dark[data-theme='pink'] select,
+html.dark[data-theme='pink'] option,
+html.dark[data-theme='pink'] optgroup,
+html.dark[data-theme='pink'] [role='listbox'],
+html.dark[data-theme='pink'] [role='menu'],
+html.dark[data-theme='pink'] [data-suggest-portal] {
+  background-color: #2a1420 !important;
+  color: #ffffff !important;
+}
+
+html.dark[data-theme='pink'] [role='listbox'] button:hover,
+html.dark[data-theme='pink'] [role='option']:hover,
+html.dark[data-theme='pink'] [role='menuitemradio']:hover,
+html.dark[data-theme='pink'] [data-suggest-portal] button:hover {
+  background-color: #422032 !important;
+  color: #ffffff !important;
 }
 
 html.dark[data-theme='pink'] .text-brand-navy,

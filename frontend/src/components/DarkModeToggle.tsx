@@ -79,7 +79,7 @@ export function DarkModeToggle() {
         <div
           role="menu"
           aria-label="Color theme"
-          className="absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 shadow-lg"
+          className="absolute right-0 z-50 mt-1 w-40 overflow-hidden rounded-xl border border-slate-200 bg-white py-1 text-slate-800 shadow-lg dark:border-slate-600 dark:bg-[#152033] dark:text-white"
         >
           {OPTIONS.map((option) => {
             const selected = option.mode === mode
@@ -95,8 +95,8 @@ export function DarkModeToggle() {
                 }}
                 className={`flex w-full cursor-pointer items-center gap-2.5 px-3 py-2 text-left text-sm ${
                   selected
-                    ? 'bg-slate-100 font-medium text-slate-900'
-                    : 'text-slate-700 hover:bg-slate-50'
+                    ? 'bg-slate-100 font-medium text-slate-900 dark:bg-[#243352] dark:text-white'
+                    : 'text-slate-700 hover:bg-slate-50 dark:text-white dark:hover:bg-[#243352]'
                 }`}
               >
                 <span
