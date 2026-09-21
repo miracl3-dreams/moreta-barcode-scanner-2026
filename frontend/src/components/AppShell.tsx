@@ -5,8 +5,7 @@ import { useAuth } from '../auth'
 import { logout as logoutRequest } from '../api'
 import { appUrl, MORETA_LOGO, publicUrl } from '../lib/routes'
 import { ConfirmDialog } from './crud/ConfirmDialog'
-// Dark mode — deferred
-// import { DarkModeToggle } from './DarkModeToggle'
+import { DarkModeToggle } from './DarkModeToggle'
 import { PageLoader } from './PageLoader'
 import { SideMenu } from './SideMenu'
 import type { PortalNavGroup } from './SideMenu'
@@ -219,9 +218,7 @@ export function AppShell({ children }: { children: ReactNode }) {
             </svg>
           </button>
           <div className="ml-auto flex min-w-0 items-center gap-2">
-            {/* Dark mode — deferred
             <DarkModeToggle />
-            */}
             <div
               className="flex min-w-0 max-w-[min(100%,18rem)] items-center gap-2 rounded-full bg-slate-100 px-3 py-1.5 text-slate-700 ring-1 ring-slate-200"
               title={user?.usrcde || undefined}

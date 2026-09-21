@@ -8,11 +8,7 @@
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <title>Moreta Barcode Scanner</title>
     <script>
-      // Dark mode — deferred; always light for now
       (function () {
-        document.documentElement.classList.remove('dark')
-        document.documentElement.setAttribute('data-theme', 'light')
-        /*
         try {
           var t = localStorage.getItem('moreta-color-mode') || localStorage.getItem('moreta-theme')
           if (t === 'midnight') t = 'dark'
@@ -24,7 +20,6 @@
         } catch (e) {
           document.documentElement.setAttribute('data-theme', 'light')
         }
-        */
       })()
     </script>
   </head>

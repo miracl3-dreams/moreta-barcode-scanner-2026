@@ -3,8 +3,7 @@ import { APP_BASE } from './lib/routes'
 import { AuthProvider } from './auth'
 import { QueryProvider } from './components/QueryProvider'
 import { ToastProvider } from './components/ui/ToastProvider'
-// Dark mode — deferred
-// import { ThemeProvider } from './theme-context'
+import { ThemeProvider } from './theme-context'
 import { HomePage } from './pages/HomePage'
 import { LoginPage } from './pages/LoginPage'
 import { DashboardHome } from './pages/DashboardHome'
@@ -19,7 +18,7 @@ function RedirectLegacyEirSigning() {
 
 export default function App() {
   return (
-    // <ThemeProvider>
+    <ThemeProvider>
     <QueryProvider>
       <ToastProvider>
         <AuthProvider>
@@ -45,6 +44,6 @@ export default function App() {
         </AuthProvider>
       </ToastProvider>
     </QueryProvider>
-    // </ThemeProvider>
+    </ThemeProvider>
   )
 }

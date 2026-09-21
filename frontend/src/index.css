@@ -65,11 +65,16 @@
   animation: dialog-zoom-in 220ms ease-out;
 }
 
+html:not(.dark) {
+  color-scheme: light;
+  color: #0f172a;
+}
+
 /* Dark mode — remap the light surfaces / ink used across the app shell and pages. */
 html.dark {
   color-scheme: dark;
   background-color: #0b1220;
-  color: #e2e8f0;
+  color: #ffffff;
 }
 
 html.dark .bg-brand-gray {
@@ -89,25 +94,34 @@ html.dark .bg-slate-100 {
   background-color: #243352;
 }
 
-html.dark .text-slate-900 {
-  color: #f8fafc;
-}
-
-html.dark .text-slate-800 {
-  color: #f1f5f9;
-}
-
-html.dark .text-slate-700 {
-  color: #e2e8f0;
+html.dark .text-slate-900,
+html.dark .text-slate-800,
+html.dark .text-slate-700,
+html.dark .text-brand-navy,
+html.dark .text-app-header,
+html.dark .text-black,
+html.dark .text-menu-item {
+  color: #ffffff;
 }
 
 html.dark .text-slate-600 {
-  color: #cbd5e1;
+  color: #e2e8f0;
 }
 
 html.dark .text-slate-500,
 html.dark .text-slate-400 {
-  color: #94a3b8;
+  color: #cbd5e1;
+}
+
+html.dark input:not([type='checkbox']):not([type='radio']),
+html.dark select,
+html.dark textarea {
+  color: #ffffff;
+}
+
+html.dark .bg-\[\#F8FAFC\] {
+  background-color: #1a2740;
+  color: #ffffff;
 }
 
 html.dark .border-slate-200,
@@ -175,8 +189,10 @@ html.dark[data-theme='blue'] .hover\:bg-slate-100:hover {
   background-color: #1e4060;
 }
 
-html.dark[data-theme='blue'] .text-brand-navy {
-  color: #93c5fd;
+html.dark[data-theme='blue'] .text-brand-navy,
+html.dark[data-theme='blue'] .text-app-header,
+html.dark[data-theme='blue'] .text-black {
+  color: #ffffff;
 }
 
 /* Pink dark mode */
@@ -221,6 +237,8 @@ html.dark[data-theme='pink'] .hover\:bg-slate-100:hover {
   background-color: #422032;
 }
 
-html.dark[data-theme='pink'] .text-brand-navy {
-  color: #f9a8d4;
+html.dark[data-theme='pink'] .text-brand-navy,
+html.dark[data-theme='pink'] .text-app-header,
+html.dark[data-theme='pink'] .text-black {
+  color: #ffffff;
 }
