@@ -1,7 +1,7 @@
-export const APP_BASE = '/barcode_scanner'
+export const APP_BASE = '/barcode_scanner_2026'
 export const MORETA_LOGO = '/images/moreta-logo.png'
 
-/** Build an app URL under /barcode_scanner (for window.location and new tabs). */
+/** Build an app URL under /barcode_scanner_2026 (for window.location and new tabs). */
 export function appUrl(path = ''): string {
   if (!path) {
     return `${APP_BASE}/`

@@ -472,7 +472,7 @@ export function BarcodeScannerPage({ title }: BarcodeScannerPageProps) {
         <div className="mt-4 rounded-xl border border-sky-200 bg-sky-50 p-3 text-sm text-sky-950">
           <p className="font-semibold">Phone testing</p>
           <p className="mt-1 text-sky-900/90">
-            Use the PC hotspot and open <code className="text-xs">https://192.168.137.1:5175/barcode_scanner/</code> on the
+            Use the PC hotspot and open <code className="text-xs">https://192.168.137.1:5175/barcode_scanner_2026/</code> on the
             phone. Camera on HTTP may need the Chrome insecure-origin flag.
           </p>
         </div>

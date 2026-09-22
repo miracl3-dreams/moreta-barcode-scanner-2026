@@ -6,7 +6,7 @@ import tailwindcss from '@tailwindcss/vite'
 import basicSsl from '@vitejs/plugin-basic-ssl'
 
 // Keep in sync with app.config.ts
-const APP_BASE = '/barcode_scanner'
+const APP_BASE = '/barcode_scanner_2026'
 const API_TARGET = 'http://127.0.0.1:8003'
 const USE_HTTPS = process.env.VITE_HTTPS === '1'
 const zxingBrowser = fileURLToPath(new URL('./node_modules/@zxing/browser/esm/index.js', import.meta.url))
