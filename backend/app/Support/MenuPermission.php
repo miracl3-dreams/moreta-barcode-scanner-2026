@@ -106,6 +106,12 @@ class MenuPermission
             return false;
         }
 
+        // Same as Moreta: an assigned EIR program can open the pending-signature
+        // list even when the View checkbox is off.
+        if ($action === self::ACTION_VIEW || $action === self::ACTION_PRINT) {
+            return true;
+        }
+
         return (bool) ($permissions[$column] ?? false);
     }
 

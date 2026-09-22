@@ -71,7 +71,7 @@ class User extends Authenticatable
 
     public function isAdmin(): bool
     {
-        return strtolower((string) $this->usrlvl) === 'supervisor';
+        return strtoupper(trim((string) $this->usrlvl)) === 'SUPERVISOR';
     }
 
     /**
