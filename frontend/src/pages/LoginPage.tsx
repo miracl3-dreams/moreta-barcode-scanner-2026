@@ -174,7 +174,7 @@ export function LoginPage() {
               name="myform"
               noValidate
             >
-              <h1 className="text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">User Login</h1>
+              <h1 className="text-center text-2xl font-bold tracking-tight text-slate-900 sm:text-3xl">Barcode Scanner Login</h1>
 
               {error ? (
                 <div className="mt-6">
