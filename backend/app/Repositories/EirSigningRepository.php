@@ -4,6 +4,7 @@ namespace App\Repositories;
 
 use App\Models\EirForm;
 use App\Support\CrudList;
+use App\Support\LegacySchema;
 use Illuminate\Contracts\Pagination\LengthAwarePaginator;
 use Illuminate\Support\Collection;
 
@@ -69,11 +70,14 @@ class EirSigningRepository
     {
         // Same working set as the EIR transaction list: not yet accepted.
         // Legacy default for unsigned filenames is the text "NULL".
-        $query = EirForm::query()->api()->unaccepted()->where(function ($inner) {
-            $inner->whereNull('rep_driver_sign')
-                ->orWhereRaw("TRIM(COALESCE(rep_driver_sign, '')) = ''")
-                ->orWhereRaw("UPPER(TRIM(COALESCE(rep_driver_sign, ''))) = 'NULL'");
-        });
+        $query = EirForm::query()->api()->unaccepted();
+        if (LegacySchema::hasColumn('eirtranfile1', 'rep_driver_sign')) {
+            $query->where(function ($inner) {
+                $inner->whereNull('rep_driver_sign')
+                    ->orWhereRaw("TRIM(COALESCE(rep_driver_sign, '')) = ''")
+                    ->orWhereRaw("UPPER(TRIM(COALESCE(rep_driver_sign, ''))) = 'NULL'");
+            });
+        }
 
         $term = trim($search);
         if ($term !== '') {

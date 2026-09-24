@@ -3,6 +3,7 @@
 namespace App\Models;
 
 use App\Support\EirSignature;
+use App\Support\LegacySchema;
 use Illuminate\Database\Eloquent\Model;
 
 class EirForm extends Model
@@ -79,12 +80,27 @@ class EirForm extends Model
     ];
 
     /**
+     * @return list<string>
+     */
+    public static function apiColumns(): array
+    {
+        $columns = [];
+        foreach (self::API_COLUMNS as $column) {
+            if ($column === 'recid' || LegacySchema::hasColumn('eirtranfile1', $column)) {
+                $columns[] = $column;
+            }
+        }
+
+        return $columns;
+    }
+
+    /**
      * @param  \Illuminate\Database\Eloquent\Builder<EirForm>  $query
      * @return \Illuminate\Database\Eloquent\Builder<EirForm>
      */
     public function scopeApi($query)
     {
-        return $query->select(self::API_COLUMNS);
+        return $query->select(static::apiColumns());
     }
 
     public function resolveRouteBinding($value, $field = null): ?static
